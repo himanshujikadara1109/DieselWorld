@@ -43,7 +43,7 @@ const Navbar = ({ showSearchInNavbar }) => {
         {/* LOGO */}
         <div className="flex items-center gap-2">
           <img
-            src="/src/assets/images/logo.png"
+            src="/assets/images/logo.png"
             alt="Diesel World"
             className="
     /*  Mobile */

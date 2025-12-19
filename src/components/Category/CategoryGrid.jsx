@@ -31,18 +31,18 @@ const CategoryGrid = () => {
           <div className="flex flex-col gap-6">
             <CategoryCard
               title="Turbochargers"
-              image="/src/assets/images/turbo.png"
+              image="/assets/images/turbo.png"
             />
             <CategoryCard
               title="Fuel Injectors"
-              image="/src/assets/images/injector.png"
+              image="/assets/images/injector.png"
             />
           </div>
 
           {/* CENTER */}
           <CategoryCard
             title="Test Equipment"
-            image="/src/assets/images/test-equipment.png"
+            image="/assets/images/test-equipment.png"
             large
           />
 
@@ -50,11 +50,11 @@ const CategoryGrid = () => {
           <div className="flex flex-col gap-6">
             <CategoryCard
               title="Turbochargers"
-              image="/src/assets/images/turbo.png"
+              image="/assets/images/turbo.png"
             />
             <CategoryCard
               title="Fuel Injectors"
-              image="/src/assets/images/injector.png"
+              image="/assets/images/injector.png"
             />
           </div>
         </div>

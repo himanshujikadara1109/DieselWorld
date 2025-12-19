@@ -33,7 +33,7 @@ const ServicesSection = () => {
             {/* IMAGE */}
             <div className="flex justify-center">
               <img
-                src="/src/assets/images/service-workshop.jpg"
+                src="/assets/images/service-workshop.jpg"
                 alt="Diesel Workshop"
                 className="
                   w-full
@@ -69,7 +69,7 @@ const ServicesSection = () => {
 
               {/* IMAGE */}
               <img
-                src="/src/assets/images/testing.jpg"
+                src="/assets/images/testing.jpg"
                 alt="Testing"
                 className="
                   w-full
@@ -101,7 +101,7 @@ const ServicesSection = () => {
 
               {/* IMAGE */}
               <img
-                src="/src/assets/images/spare-parts.jpg"
+                src="/assets/images/spare-parts.jpg"
                 alt="Spare Parts"
                 className="
                   w-full

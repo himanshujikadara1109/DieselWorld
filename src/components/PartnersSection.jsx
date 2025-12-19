@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 
 const brands = [
-  { name: "BOSCH", img: "/src/assets/brands/bosch.png", bg: "bg-red-100" },
-  { name: "MOTORPAL", img: "/src/assets/brands/motorpal.png", bg: "bg-blue-100" },
-  { name: "LUCAS", img: "/src/assets/brands/lucas.png", bg: "bg-green-100" },
-  { name: "DISA", img: "/src/assets/brands/disa.png", bg: "bg-gray-200" },
-  { name: "DELPHI", img: "/src/assets/brands/delphi.png", bg: "bg-indigo-100" },
+  { name: "BOSCH", img: "/assets/brands/bosch.png", bg: "bg-red-100" },
+  { name: "MOTORPAL", img: "/assets/brands/motorpal.png", bg: "bg-blue-100" },
+  { name: "LUCAS", img: "/assets/brands/lucas.png", bg: "bg-green-100" },
+  { name: "DISA", img: "/assets/brands/disa.png", bg: "bg-gray-200" },
+  { name: "DELPHI", img: "/assets/brands/delphi.png", bg: "bg-indigo-100" },
 ];
 
 const PartnersSection = () => {

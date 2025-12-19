@@ -36,7 +36,7 @@ const ZoomImage = () => {
       "
     >
       <img
-        src="/src/assets/images/wellcom.jpg"
+        src="/assets/images/wellcom.jpg"
         alt="Diesel Engine Repair"
         className="w-full h-full object-cover transition-transform duration-300 ease-out"
         style={{

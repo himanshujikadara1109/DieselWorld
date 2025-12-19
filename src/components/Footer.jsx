@@ -9,7 +9,7 @@ const Footer = () => {
 
             <div className="flex justify-center lg:justify-start">
               <img
-                src="/src/assets/images/logo.png"
+                src="/assets/images/logo.png"
                 alt="Diesel World"
                 className="w-[190px] lg:w-[220px] object-contain"
               />
@@ -92,7 +92,7 @@ const Footer = () => {
             © 2025 Diesel World Pvt. Ltd. All rights reserved.
           </p>
           <img
-            src="/src/assets/images/payment.png"
+            src="/assets/images/payment.png"
             alt="Payments"
             className="h-[19px]"
           />

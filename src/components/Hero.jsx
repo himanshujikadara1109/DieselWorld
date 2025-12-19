@@ -28,7 +28,7 @@ const Hero = () => {
   return (
     <section className="relative w-full h-[520px] sm:h-[600px] lg:h-[700px] overflow-hidden">
       <video
-        src="/src/assets/videos/hero.mp4"
+        src="/assets/videos/hero.mp4"
         autoPlay
         muted
         loop
