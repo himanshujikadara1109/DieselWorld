@@ -49,9 +49,10 @@ const PartnersSection = () => {
     <section className="py-14 sm:py-16 bg-white overflow-hidden">
       {/* ===== TITLE ===== */}
         <div className="text-center mb-14">
-          <h2 className="text-[32px] md:text-[36px] font-bold text-[#C81318]">
-            Our Partner Brands
+          <h2 className="text-4xl sm:text-5xl font-extrabold">
+            Our <span className="text-red-600">Partner</span>Brands
           </h2>
+          
           <p className="mt-3 text-[16px] md:text-[18px] font-semibold text-[#343333] tracking-wide max-w-3xl mx-auto">
             Quality, reliability, and performance backed by world-class brand
           </p>

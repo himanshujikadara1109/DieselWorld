@@ -20,19 +20,16 @@ const ZoomImage = () => {
       onMouseMove={handleMove}
       className="
         overflow-hidden
-        rounded-lg
-
+        rounded-xl
         mx-auto
-        sm:mx-auto
-        lg:mx-[-30px]
 
-        mb-[5px]
-        sm:mb-8
-        lg:mb-0
+        w-full
+        max-w-[95%]        /* Mobile */
+        sm:max-w-[90%]     /* Tablet */
+        md:max-w-[420px]   /* Desktop */
+        lg:max-w-[466px]
 
-        w-[240px] h-[240px]
-        sm:w-[320px] sm:h-[320px]
-        lg:w-[466px] lg:h-[466px]
+        aspect-square
       "
     >
       <img

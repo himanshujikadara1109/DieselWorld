@@ -1,148 +1,153 @@
 import { useEffect, useState } from "react";
-import ZoomImage3D from "./ZoomImage3D";
+import { motion } from "framer-motion";
+import ZoomImage from "../components/ZoomImage3D";
+
+/* ===== ANIMATION VARIANTS ===== */
+const container = {
+  hidden: {},
+  show: {
+    transition: { staggerChildren: 0.15 },
+  },
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: "easeOut" },
+  },
+};
+
+const zoomIn = {
+  hidden: { opacity: 0, scale: 0.9 },
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
+};
 
 const AboutSection = () => {
-  const text = "Welcome To";
+  const text = "Welcome to";
   const [typed, setTyped] = useState("");
 
-  /* ===== Type EFfect ===== */
+  /* Typewriter effect */
   useEffect(() => {
     let i = 0;
-    let string = '';
+    let str = "";
     const timer = setInterval(() => {
       if (i < text.length) {
-        string += text[i];
-        setTyped(string);
+        str += text[i];
+        setTyped(str);
         i++;
-      } else {
-        clearInterval(timer);
-      }
+      } else clearInterval(timer);
     }, 80);
 
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <section className="bg-white py-16 lg:py-20">
-      {/* ===== MAIN CONTAINER ===== */}
-      <div
+    <section className="bg-white pt-24 pb-16 lg:pt-28 lg:pb-20">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.3 }}
         className="
-          mx-auto
-          w-full
           max-w-[1152px]
-          min-h-[466px]
+          mx-auto
+          px-4 lg:px-0
           grid
           grid-cols-1
           lg:grid-cols-2
-          gap-8 lg:gap-[20px]
+          gap-10
           items-center
-          px-4 lg:px-0
         "
       >
-        {/* ================= IMAGE ================= */}
-        <div className="flex justify-center">
-          <div
-            className="
-              w-[260px] h-[260px]
-              sm:w-[340px] sm:h-[340px]
-              lg:w-[466px] lg:h-[466px]
-            "
-          >
-            <ZoomImage3D />
-          </div>
-        </div>
-
-        {/* ================= CONTENT ================= */}
-        <div
-          className="
-            flex flex-col
-            text-center lg:text-left
-            lg:-ml-[24px]
-            lg:-mt-[26px]
-            mt-[-30px]
-          "
-        >
-          {/* ===== Welcome To ===== */}
-          <h4
-            className="
-              mx-auto lg:mx-0
-              w-[135px]
-              h-[32px]
-              mt-4 lg:mt-5
-              font-title
-              font-semibold
-              text-[18px] lg:text-[20px]
-              leading-[32px]
-              text-[#404040]
-              
-            "
-          >
+        {/* ===== MOBILE / TABLET HEADER ===== */}
+        <motion.div variants={fadeUp} className="block lg:hidden text-center mb-6">
+          <h4 className="font-heading text-[18px] font-medium text-gray-700">
             {typed}
-            <span className="ml-1 animate-pulse">|</span>
           </h4>
 
-          {/* ===== Title ===== */}
-          <h2
-            className="
-              mt-2
-              font-heading
-              font-semibold
-              text-[28px] sm:text-[32px] lg:text-[40px]
-              leading-tight lg:leading-[56px]
-              text-[#C81318]
-            "
-          >
+          <h2 className="font-heading text-[30px] sm:text-[32px] font-extrabold tracking-[-0.02em] text-red-600 mt-1">
             Diesel World
           </h2>
+        </motion.div>
 
-          {/* Divider */}
-          <div className="w-[56px] h-[4px] bg-[#C81318] my-4 rounded mx-auto lg:mx-0"></div>
+        {/* ===== IMAGE ===== */}
+        <motion.div
+          variants={zoomIn}
+          className="flex justify-center lg:order-1 order-2"
+        >
+          <ZoomImage />
+        </motion.div>
 
-          {/* ===== Description ===== */}
-          <p
+        {/* ===== CONTENT ===== */}
+        <motion.div
+          variants={container}
+          className="lg:order-2 order-3 text-left p-3"
+        >
+          {/* Desktop header */}
+          <motion.div variants={fadeUp} className="hidden lg:block mb-4">
+            <h4 className="font-heading text-[20px] font-medium text-gray-700">
+              {typed}
+            </h4>
+
+            <h2 className="font-heading text-[36px] xl:text-[40px] font-extrabold tracking-[-0.02em] text-red-600 mt-1">
+              Diesel World
+            </h2>
+          </motion.div>
+
+          {/* Description */}
+          <motion.p
+            variants={fadeUp}
             className="
-              max-w-full lg:max-w-[622px]
               font-body
-              font-normal
-              text-[15px] sm:text-[16px] lg:text-[18px]
-              leading-[24px] sm:leading-[26px] lg:leading-[25px]
-              text-[#404040]
-              text-start
+              text-[14px]
+              sm:text-[15px]
+              lg:text-[16px]
+              leading-[24px]
+              sm:leading-[26px]
+              text-gray-700
             "
           >
-            <span className="text-[#262626]">
+            <span className="font-semibold text-gray-900">
               Diesel World Pvt. Ltd.
             </span>{" "}
             is a globally trusted name in diesel engine spare parts and repair
             solutions. Backed by over{" "}
-            <span className="text-[#C81318] font-semibold">
+            <span className="text-red-600 font-semibold">
               35 years of industry expertise,
             </span>{" "}
-            we specialize in delivering genuine aftermarket parts, advanced diagnostics, and precision repair services for all types of diesel systems. Our experienced technicians, equipped with state-of-the-art tools and facilities, deliver expert repairs, ensuring your diesel engines operate at peak performance. Whether you're in need of component testing, pump reconditioning, or comprehensive repair solutions, Diesel World is committed to providing reliable, cost-effective services that keep you moving forward.
-          </p>
+            we specialize in delivering genuine aftermarket parts, advanced
+            diagnostics, and precision repair services for all types of diesel
+            systems. Our experienced technicians, equipped with state-of-the-art
+            tools and facilities, deliver expert repairs, ensuring your diesel
+            engines operate at peak performance. Whether you're in need of
+            component testing, pump reconditioning, or comprehensive repair
+            solutions, Diesel World is committed to providing reliable,
+            cost-effective services that keep you moving forward.
+          </motion.p>
 
-          {/* ===== Button ===== */}
-          <button
+          {/* Button */}
+          <motion.button
+            variants={fadeUp}
+            whileHover={{ x: 6 }}
             className="
               mt-6
-              mx-auto lg:mx-0
-              w-[121px]
-              h-[28px]
-              inline-flex
-              items-center
-              gap-2
-              font-body
+              font-heading
               font-semibold
-              text-[16px] lg:text-[18px]
-              leading-[28px]
-              text-[#A90B10]
+              text-red-600
+              flex items-center gap-2
+              transition-all
             "
           >
-            Read More
-            <span className="text-[18px] lg:text-[20px]">→</span>
-          </button>
-        </div>
-      </div>
+            Read More <span>→</span>
+          </motion.button>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
