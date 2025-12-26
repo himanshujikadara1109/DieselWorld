@@ -36,8 +36,7 @@ const ServicesSection = () => {
               long service life for every component. benches and
               manufacturer-approved procedures, our skilled technicians ensure
               optimal performance, efficiency, and long service life for every
-              component. benches and manufacturer-approved procedures, our
-              skilled
+              component.
             </p>
 
             <div className="w-full h-[220px] md:h-[280px] rounded-md overflow-hidden">
