@@ -142,7 +142,7 @@ const Navbar = ({ showSearchInNavbar = false }) => {
             </nav>
 
             {/* Desktop Actions */}
-            <div className="hidden lg:flex items-center gap-6">
+            <div className="hidden lg:flex items-center gap-2">
               <button className="p-3 rounded-full hover:bg-gray-100/70 transition">
                 <Search size={20} className={isScrolled ? "text-gray-800" : "text-white"} />
               </button>

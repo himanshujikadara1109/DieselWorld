@@ -40,15 +40,13 @@ const App = () => {
       {/* Navbar - no animation needed on load */}
       <Navbar />
 
-      {/* Hero */}
       <Hero />
 
-      {/* Search Overlay */}
+  
       <SearchOverlay />
 
-      {/* Content Sections */}
       <main className="flex flex-col gap-0">
-        {/* About */}
+
         <motion.section
           initial="hidden"
           whileInView="visible"
@@ -60,7 +58,7 @@ const App = () => {
 
         {/* Main Products Showcase - scroll focus */}
         <motion.section
-          id="products" /* optional: for anchor links */
+          id="products" 
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}

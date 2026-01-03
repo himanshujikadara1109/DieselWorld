@@ -2,16 +2,17 @@ const Footer = () => {
   return (
     <footer className="bg-[#262626]">
       <div className="mx-auto max-w-[1440px] px-4 lg:px-6 py-6 text-white">
-        {/* ================= MOBILE + TABLET VIEW ================= */}
+        {/* === MOBILE + TABLET VIEW === */}
         <div className="lg:hidden flex flex-col items-center py-8">
-          {/* LOGO */}
+
+          {/* logo */}
           <img
             src="/assets/images/logo.png"
             alt="Diesel World"
             className="w-[170px] mb-8"
           />
 
-          {/* LINKS GRID (AUTO ADJUST) */}
+
           <div
             className="
               w-full
